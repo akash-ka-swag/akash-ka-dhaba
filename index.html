@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Akash Da Dhaba - Swad Lucknow Wala</title>
+  <style>
+    body {
+      background: #1a1a1a;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+      margin: 0;
+    }
+    .title {
+      font-size: 2.5rem;
+      color: #ff6b35;
+      text-shadow: 0 0 10px #ff6b35;
+      margin-bottom: 10px;
+    }
+    .tagline {
+      color: #ffd700;
+      margin-bottom: 30px;
+    }
+    .menu-item {
+      background: #2d2d2d;
+      border: 2px solid #ff6b35;
+      border-radius: 15px;
+      padding: 15px;
+      margin: 15px auto;
+      max-width: 350px;
+      box-shadow: 0 0 15px rgba(255, 107, 53, 0.3);
+    }
+    .item-name {
+      font-size: 1.3rem;
+      color: #ffd700;
+      margin-bottom: 5px;
+    }
+    .item-price {
+      font-size: 1.1rem;
+      color: #4ade80;
+      margin-bottom: 10px;
+    }
+    .order-btn {
+      background: #25D366;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-size: 1rem;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .order-btn:hover {
+      background: #128C7E;
+    }
+    .footer {
+      margin-top: 40px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <h1 class="title">🍕 AKASH DA DHABA 🍕</h1>
+  <p class="tagline">Swad Lucknow Wala - Ghar Jaisa Khana</p>
+
+  <div class="menu-item">
+    <div class="item-name">Paneer Butter Masala</div>
+    <div class="item-price">₹180 Full Plate</div>
+    <button class="order-btn" onclick="orderNow('Paneer Butter Masala - ₹180')">Order on WhatsApp</button>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-name">Chicken Biryani</div>
+    <div class="item-price">₹220 Full Plate</div>
+    <button class="order-btn" onclick="orderNow('Chicken Biryani - ₹220')">Order on WhatsApp</button>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-name">Veg Chowmein</div>
+    <div class="item-price">₹90 Full Plate</div>
+    <button class="order-btn" onclick="orderNow('Veg Chowmein - ₹90')">Order on WhatsApp</button>
+  </div>
+
+  <div class="menu-item">
+    <div class="item-name">Butter Naan (2 Pcs)</div>
+    <div class="item-price">₹50</div>
+    <button class="order-btn" onclick="orderNow('Butter Naan 2 Pcs - ₹50')">Order on WhatsApp</button>
+  </div>
+
+  <div class="footer">
+    <p>📍 Hazratganj, Lucknow</p>
+    <p>📞 Call: 9580173772</p>
+    <p>Made with ❤️ by Akash</p>
+  </div>
+
+  <script>
+    function orderNow(item) {
+      let phoneNumber = "919580173772"; // Yahan apna number daal bhai
+      let message = `Namaste Akash Da Dhaba! 🙏\nMujhe ye order karna hai:\n\n${item}\n\nAddress: `;
+      let url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+      window.open(url, '_blank');
+    }
+  </script>
+</body>
+</html>
