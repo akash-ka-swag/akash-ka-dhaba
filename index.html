@@ -59,8 +59,21 @@
       margin-top: 40px;
       color: #888;
     }
-  .slider { max-width: 100%; position: relative; margin: auto; }
-.slide { display: none; border-radius: 12px; }
+  .slider { 
+  max-width: 100%; 
+  position: relative; 
+  margin: 15px auto;
+  border-radius: 12px;
+  overflow: hidden;
+  height: 200px;  /* YE LINE ADD KAR - HEIGHT FIX */
+}
+.slide { 
+  display: none; 
+  width: 100%;
+  height: 100%;  /* YE LINE ADD KAR */
+  object-fit: cover;  /* YE SABSE ZARURI HAI - PHOTO CROP NAHI HOGI */
+  border-radius: 12px; 
+}
   </style>
 </head>
 <body>
