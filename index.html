@@ -59,6 +59,8 @@
       margin-top: 40px;
       color: #888;
     }
+  .slider { max-width: 100%; position: relative; margin: auto; }
+.slide { display: none; border-radius: 12px; }
   </style>
 </head>
 <body>
@@ -67,6 +69,11 @@
 <p style="color: #25D366; font-size: 14px; margin-top: -10px; margin-bottom: 20px;">
 👇 Neeche Menu se item chuno → WhatsApp pe order bhejo → Ghar baithe khana pao 👇
 </p>
+ <div class="slider">
+ <img class="slide" src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38">
+ <img class="slide" src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445">
+ <img class="slide" src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe">
+ </div>
   <div class="menu-item">
     <div class="item-name">Paneer Butter Masala</div>
     <div class="item-price">₹180 Full Plate</div>
@@ -137,6 +144,18 @@
       let url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
       window.open(url, '_blank');
     }
+ let slideIndex = 0;
+showSlides();
+function showSlides() {
+  let slides = document.getElementsByClassName("slide");
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  slides[slideIndex-1].style.display = "block";
+  setTimeout(showSlides, 2000); // 2 second me photo change
+}
   </script>
 </body>
 </html>
