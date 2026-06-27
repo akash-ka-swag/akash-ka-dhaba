@@ -153,7 +153,7 @@
   <script>
     function orderNow(item) {
       let phoneNumber = "919580173772"; // Yahan apna number daal bhai
-      let message = 'Namaste Shiv Garden! 🙏\nMujhe ye order karna hai:\n\n${item}\n\nAddress: ';
+      let message = `Namaste Shiv Garden! 🙏\nMujhe ye order karna hai:\n\n${item}\n\nAddress: `;
       let url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
       window.open(url, '_blank');
     }
